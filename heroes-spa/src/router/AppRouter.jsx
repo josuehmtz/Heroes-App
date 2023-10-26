@@ -5,29 +5,19 @@ import {
 } from "react-router-dom";
 
 {/* <HeroesApp /> */}
-import { MarvelPage } from "../heroes/pages/MarvelPage";
-import { HeroesApp } from "../HeroesApp";
-import { DcPage } from "../heroes/pages/DcPage";
 import { LoginPage } from "../auth/pages/LoginPage";
-
+import { childrenHeoresRoutes, HeoresRoutes } from "../heroes/routes/HeoresRoutes";
 
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element:<Navigate to={'/marvel'} />,
-    },
-    {
-      path: "marvel",
-      element:<MarvelPage />,
-    },
-    {
-      path: "dc",
-      element:<DcPage />,
-    },
-    {
-      path: "login",
+      path: "/login",
       element:<LoginPage />,
+    },
+    {
+      path: "/",
+      element:<HeoresRoutes />,
+      children: childrenHeoresRoutes
     },
   ]);
 
