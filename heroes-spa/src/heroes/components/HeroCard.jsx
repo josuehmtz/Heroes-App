@@ -12,7 +12,7 @@ export const HeroCard = ({id,
     <div className="col">
         <div className="card p-3">
             <div className="row g-0">
-                <div className="col-4">
+                <div className="col-4 animate__bounce">
                     <img width='80%' src={heroImage} alt={superhero} className="card-image"/>
                 </div>
                 <div className="col-8">
